@@ -25,7 +25,7 @@ const RegisterLogin = () => {
       .then((res) => {
         //console.log(res);
         const result = res.data;
-        console.log(result);
+        //console.log(result);
         if (res.status === 200||201) {
           setLoggedInUsername(username);
           setId(result);
@@ -33,7 +33,7 @@ const RegisterLogin = () => {
           setError("User not found");
         }
       }).catch((err)=>{
-        alert(err);
+        //alert(err);
         setError(err);
       })
     }else{
@@ -53,7 +53,7 @@ const RegisterLogin = () => {
             type="text"
             placeholder="username"
             className="block w-full rounded-sm p-2 mb-3 border"
-            minlength="6" maxlength="12"
+            minLength="6" maxLength="12"
             required
             title="Username must be 6-12 characters long"
           />

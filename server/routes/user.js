@@ -53,7 +53,7 @@ router.post('/logout', (req, res) => {
 /*----------------register-----------------*/
 router.post('/register', async (req, res) => {
     const { username, password } = req.body;
-    //console.log(username, password);
+    console.log(username, password);
     try {
         const hashedPassword = bcrypt.hashSync(password, bcryptSalt);
         const createdUser = await User.create({
