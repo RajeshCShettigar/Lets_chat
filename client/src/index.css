@@ -1,0 +1,32 @@
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Shantell+Sans:ital,wght@1,300&family=Ubuntu:wght@500&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+    --primary: rgb(255, 255, 255);
+    --secondary: rgb(252, 46, 221);
+}
+
+* {
+    scrollbar-width: thin;
+    scrollbar-color: var(--secondary) var(--primary);
+}
+
+/* Chrome, Edge, and Safari */
+*::-webkit-scrollbar {
+    width: 3px;
+}
+
+*::-webkit-scrollbar-track {
+    background: var(--primary);
+    border-radius: 5px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--secondary);
+    border-radius: 14px;
+    border: 3px solid var(--primary);
+}
