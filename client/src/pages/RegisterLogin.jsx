@@ -13,7 +13,7 @@ const RegisterLogin = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     const type = isLoginOrRegister === "register" ? "register" : "login";
-    const url=`http://localhost:9000/${type}`;
+    const url=`https://chat-app-6j5k.onrender.com/${type}`;
     if(username!==""||password!==""){
     const data = JSON.stringify({ username, password });
     await axios

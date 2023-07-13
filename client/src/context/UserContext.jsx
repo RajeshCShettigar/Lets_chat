@@ -8,7 +8,7 @@ export function UserContextProvider({children}) {
   const [id, setId] = useState(null);
 
   useEffect(() => {
-    axios.get('http://localhost:9000/profile').then(response => {
+    axios.get('https://chat-app-6j5k.onrender.com/profile').then(response => {
       setId(response.data.userId);
       setUsername(response.data.username);
       console.log(JSON.stringify(response));

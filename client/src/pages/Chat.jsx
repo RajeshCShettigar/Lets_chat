@@ -22,7 +22,7 @@ const  Chat=()=> {
 
   /*-----Web Socket connection---------- */
   const connectToWs=()=> {
-    const ws = new WebSocket('ws://localhost:9000');
+    const ws = new WebSocket('ws://chat-app-6j5k.onrender.com');
     setWs(ws);
     ws.addEventListener('message', handleMessage);
     ws.addEventListener('close', () => {
@@ -57,7 +57,7 @@ const  Chat=()=> {
 
   /*-----Handle logout---------- */
   const logout=()=> {
-    axios.post('http://localhost:9000/logout',{
+    axios.post('https://chat-app-6j5k.onrender.com/logout',{
       headers: {
         "Content-Type": "application/json",
       },
@@ -77,7 +77,7 @@ const  Chat=()=> {
       file,
     }));
     if (file) {
-      axios.get('http://localhost:9000/messages/'+selectedUserId).then(res => {
+      axios.get('https://chat-app-6j5k.onrender.com/messages/'+selectedUserId).then(res => {
         setMessages(res.data);
       });
     } else {
@@ -114,7 +114,7 @@ const  Chat=()=> {
 
   /*-----------get the list of people------------- */
   useEffect(() => {
-    axios.get('http://localhost:9000/people').then(res => {
+    axios.get('https://chat-app-6j5k.onrender.com/people').then(res => {
       const offlinePeopleArr = res.data
         .filter(p => p._id !== id)
         .filter(p => !Object.keys(onlinePeople).includes(p._id));
@@ -129,7 +129,7 @@ const  Chat=()=> {
   /*-----------get the messages for selected user------------- */
   useEffect(() => {
     if (selectedUserId) {
-      axios.get('http://localhost:9000/messages/'+selectedUserId).then(res => {
+      axios.get('https://chat-app-6j5k.onrender.com/messages/'+selectedUserId).then(res => {
         setMessages(res.data);
       });
     }
