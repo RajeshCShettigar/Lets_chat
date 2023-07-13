@@ -28,5 +28,5 @@
     "tailwindcss": "^3.3.2",
     "vite": "^4.3.2"
   },
-  "proxy": "http://localhost:9000/"
+  "proxy": "https://chat-app-6j5k.onrender.com/"
 }
